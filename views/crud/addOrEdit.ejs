@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD using Node.JS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="bg-info">
+    <div class="row">
+        <div class="col-md-6 offset-md-3" style="background-color: #fff; margin-top: 25px; padding:20px;">
+           
+            <form action="/" method="POST">
+                <h3 style="text-align: center;"><%= viewTitle %></h3>
+                <input type="hidden" name="_id" value="<%= doc._id %>">
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" name="email" placeholder="Email" value="<%= doc.email %>">
+                    <div class="text-danger"><%= doc.emailError %></div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>First Name</label>
+                        <input type="text" class="form-control" name="fname" placeholder="First Name" value="<%= doc.fname %>">
+                        <div class="text-danger"><%= doc.fnameError %></div>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label>Last Name</label>
+                        <input type="text" class="form-control" name="lname" placeholder="Last Name" value="<%= doc.lname %>">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label>Contact</label>
+                        <input type="text" class="form-control" name="contact" placeholder="Contact" value="<%= doc.contact %>">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label>Job Type</label>
+                        <input type="text" class="form-control" name="job" placeholder="Job Type" value="<%= doc.job %>">
+                    </div>
+                    
+                    <div class="form-group col-md-6">
+                        <label>Salary</label>
+                        <input type="text" class="form-control" name="salary" placeholder="Salary" value="<%= doc.salary %>">
+                    </div>
+                    
+                    <div class="form-group col-md-6">
+                        <label>Address</label>
+                        <input type="text" class="form-control" name="add" placeholder="Address" value="<%= doc.add %>">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Company</label>
+                    <input type="text" class="form-control" name="company" placeholder="Company" value="<%= doc.company %>">
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+                    <a class="btn btn-secondary" href="/list"><i class="fa fa-list-alt"></i> View All</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>
